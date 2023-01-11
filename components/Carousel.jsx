@@ -1,23 +1,18 @@
 const CarouselData = [
   {
-    image:
-      "https://images.unsplash.com/photo-1546768292-fb12f6c92568?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+    image: "/images/1.webp",
   },
+
   {
-    image:
-      "https://images.unsplash.com/photo-1501446529957-6226bd447c46?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1489&q=80",
+    image: "/images/2.webp",
   },
+
   {
-    image:
-      "https://images.unsplash.com/photo-1483729558449-99ef09a8c325?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1350&q=80",
+    image: "/images/3.webp",
   },
+
   {
-    image:
-      "https://images.unsplash.com/photo-1475189778702-5ec9941484ae?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1351&q=80",
-  },
-  {
-    image:
-      "https://images.unsplash.com/photo-1503177119275-0aa32b3a9368?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1350&q=80",
+    image: "/images/4.webp",
   },
 ];
 
@@ -45,14 +40,30 @@ function Carousel() {
         <>
           <div
             style={{
-              backgroundImage: `url("${CarouselData[current].image}")`,
+              backgroundImage: `linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("/images/banner.jpg")`,
+              // backgroundImage: `linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("${CarouselData[current].image}")`,
               backgroundSize: "cover",
               backgroundPosition: "center",
               height: "100%",
               width: "100%",
               backgroundAttachment: "fixed",
+              position: "relative",
             }}
-          ></div>
+          >
+            <div className="ml-6 absolute lg:max-w-[65%] bottom-[13%] lg:bottom-[30%]">
+              <h1 className="text-white font-bold left-2 uppercase text-xl lg:text-[50px] lg:leading-[50px]">
+                Al-Huda Students’ Association (ASAs)
+              </h1>
+              <p className="text-gray-400 mt-2">
+                Al-Huda Students’ Association (ASAs) is the official
+                organization of UG students of Darul Huda Islamic University.
+                Upholding the true spirit of Darul Huda’s evergreen mission:
+                learning for both world; ASAs acts as the arena for the
+                betterment of growing generation, by conducting various
+                programmes that aim at the full-fledged development of students.
+              </p>
+            </div>
+          </div>
         </>
       ) : (
         <CircularProgress />

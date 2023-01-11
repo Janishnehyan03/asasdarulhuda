@@ -9,6 +9,7 @@ import Footer from "../components/Footer";
 import Cards2 from "../components/Cards2";
 import Carousel from "../components/Carousel";
 import { useState } from "react";
+import About from "../components/About";
 
 export default function Home() {
   const [isOpen, setIsOpen] = useState(false);
@@ -25,6 +26,7 @@ export default function Home() {
       {/* <HeroSection /> */}
       <Features />
       <Cards1 />
+      <About />
       <Cards2 />
       <Contact />
       <Footer />
